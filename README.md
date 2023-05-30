@@ -13,3 +13,4 @@ Olá, meu nome é Wendel tenho 16 anos estou cursando ensino médio e ensino té
 [![](https://visitcount.itsvg.in/api?id=Fackzinnn&icon=0&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+
