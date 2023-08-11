@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Par ou Ímpar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Par ou Ímpar</h1>
+    <p>Escolha um número e jogue contra o computador!</p>
+    <input type="number" id="playerNumber" placeholder="Seu número">
+    <button id="playButton">Jogar</button>
+    <p id="result"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+p#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+<script>
+document.getElementById("playButton").addEventListener("click", playGame);
+
+function playGame() {
+  const playerNumber = parseInt(document.getElementById("playerNumber").value);
+  const computerNumber = Math.floor(Math.random() * 11); // Gera um número aleatório de 0 a 10
+
+  const total = playerNumber + computerNumber;
+  const result = total % 2 === 0 ? "par" : "ímpar";
+
+  const message = `Você escolheu ${playerNumber}, o computador escolheu ${computerNumber}. Total: ${total} é ${result}!`;
+
+  document.getElementById("result").textContent = message;
+}
+</script>
